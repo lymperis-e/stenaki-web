@@ -19,7 +19,52 @@ module.exports = {
 
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-    themes: [ 'retro', 'lofi', 'emerald',  'cupcake', 'black' ,'coffee', 'luxury',
+    themes: ['garden' ,'stenaki-retro',
+      {
+        "stenaki-retro": {
+          ...require("daisyui/src/colors/themes")["[data-theme=retro]"],
+
+          "primary": "#496c91",
+          "secondary": "#94ceff",
+          "accent": "#fac1a0",
+          "neutral": "#496c91",
+          "base-100": "#b9e1d9",
+
+          "primary-focus": "#154474",
+          ".btn-primary": {
+            "color": "#b9e1da"
+          },
+          ".btn-primary:hover": {
+            'background-color': '#154474',
+            'border-color': '#154474',
+          },
+          ".btn-ghost:hover": {
+            "background": "transparent",
+            "border-color": "#94cdff"
+          }
+        },
+      },
+
+
+
+
+
+
+
+
+      {
+        "stenaki-light": {
+          primary: '#b9e1da',
+          secondary: '#F19A8E',
+          accent: '#3788BE',
+          neutral: '#4E5377',
+          'base-100': '#FDFDFE',
+          info: '#7397DE',
+          success: '#33ddbe',
+          warning: '#f6c33f',
+          error: '#F87272',
+        },
+      },
       {
         morning: {
           primary: '#D26A5D',
@@ -35,7 +80,7 @@ module.exports = {
       },
       {
         "catppuccin-latte": {
-          primary: "#1e66f5", // blue
+          primary: "#1e66f5", // blue d88166
           secondary: "#ea76cb", // pink
           accent: "#179299", // teal
           neutral: "#dce0e8", // crust

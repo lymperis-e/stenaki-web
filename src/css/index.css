@@ -1,26 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Mynerve&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Mynerve', cursive;
+  font-family: 'EB Garamond', serif;
+  font-family: 'Advent Pro', sans-serif;
+  /*font-family: 'Kumbh Sans', sans-serif;*/
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 200;
+ 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  transition: all .8s;
 }
+body{
+  transition: all .8s;
+
+  /*background-image: url("assets/waves.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;*/
+}
+
+
 
 .route-base{
   padding-top: 20vh;
 }
 
 h1{
-  font-weight: 900;
+  font-weight: 100;
 }
 h2{
   font-weight: 600;
+}
+a{
+  cursor: pointer;
+}
+
+.logo-img{
+  transition: all .8s;
+}
+.logo-img:hover{
+opacity: .7;
+}
+main{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  @apply normal-case;
+}
+
+.btn-link{
+  @apply no-underline;
+  @apply font-extralight;
+  @apply text-inherit;
 }

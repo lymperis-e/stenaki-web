@@ -6,7 +6,7 @@ function NavbarElement(props) {
   const { link, text, ...restAttrs } = attrs;
 
   return (
-    <NavLink to={link} className="btn btn-ghost normal-case nav-link" {...restAttrs} > {children} </NavLink>
+    <NavLink to={link} className="btn btn-accent btn-outline normal-case nav-link" {...restAttrs} > {children} </NavLink>
   )
 }
 

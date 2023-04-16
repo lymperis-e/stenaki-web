@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import NavbarComponent from "./components/NavbarComponent"
 
 import Home from './routes/Home'
@@ -8,7 +8,7 @@ function App() {
   return (
 
     <>
-      <HashRouter>
+      <BrowserRouter basename="/stenaki-web/">
         <Routes>
           <Route path="/" element={<NavbarComponent />}>
 
@@ -17,7 +17,7 @@ function App() {
 
           </Route>
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
       {/*<FooterComponent/>*/}
     </>
 

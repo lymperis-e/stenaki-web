@@ -5,7 +5,7 @@ function ThemeToggle({
     dark,
     description
 }) {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('garden');
     const [checked, setChecked] = useState(true)
     const toggleTheme = () => {
         setTheme(theme === light ? dark : light);
@@ -29,7 +29,7 @@ function ThemeToggle({
     }, [theme]);
 
     return (
-        <Form className="form-control">
+        <Form className="form-control  mx-auto md:mr-1 md:ml-0">
             <Form.Label title={description}>
                 <Toggle onClick={toggleTheme} className="toggle toggle-primary toggle-sm" onChange={toggleChecked} />
             </Form.Label>

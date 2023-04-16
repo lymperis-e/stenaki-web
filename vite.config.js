@@ -11,10 +11,8 @@ let outDir = resolve(__dirname, 'dist')
 
 export default defineConfig({
   root: root, 
-  base: process.env.NODE_ENV === 'production' ? '/prod-base-url' : '/',
-  define: {
-    'process.env.PUBLIC_URL': JSON.stringify(process.env.NODE_ENV === 'production' ? '/prod-base-url' : '/')
-  },
+  base:  '/stenaki-web/', // process.env.NODE_ENV === 'production' ? '/stenaki-web/' : '/',
+
   plugins: [react(), splitVendorChunkPlugin()],
   build: { 
     outDir,
